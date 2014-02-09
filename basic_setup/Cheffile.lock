@@ -1,0 +1,50 @@
+SITE
+  remote: http://community.opscode.com/api/v1
+  specs:
+    apt (2.3.6)
+    bluepill (2.3.1)
+      rsyslog (>= 0.0.0)
+    build-essential (1.4.2)
+    chef_gem (0.1.0)
+    mysql (4.0.20)
+      build-essential (~> 1.4)
+      openssl (~> 1.1)
+    ohai (1.1.12)
+    openssl (1.1.0)
+    rsyslog (1.10.2)
+    runit (1.5.8)
+      build-essential (>= 0.0.0)
+      yum (~> 3.0)
+      yum-epel (>= 0.0.0)
+    yum (3.0.6)
+    yum-epel (0.2.0)
+      yum (~> 3.0)
+
+GIT
+  remote: git://github.com/fnichol/chef-rvm.git
+  ref: master
+  sha: 26ad5c043c70ea98855a049fbbacb7ffc5ad73e3
+  specs:
+    rvm (0.9.1)
+      chef_gem (>= 0.0.0)
+
+GIT
+  remote: git://github.com/opscode-cookbooks/nginx.git
+  ref: master
+  sha: 1b90039a21ee0144c362ce61fc5c9a7d8af92485
+  specs:
+    nginx (2.2.3)
+      apt (~> 2.2)
+      bluepill (~> 2.3)
+      build-essential (~> 1.4)
+      ohai (~> 1.1)
+      runit (~> 1.2)
+      yum (~> 3.0)
+      yum-epel (>= 0.0.0)
+
+DEPENDENCIES
+  mysql (>= 0)
+  nginx (>= 0)
+  runit (>= 0)
+  rvm (>= 0)
+
