@@ -1,0 +1,1 @@
+default['ruby']['install_version'] = 'ruby-2.0.0-p353'

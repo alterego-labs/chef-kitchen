@@ -1,7 +1,10 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
+
+  Vagrant.require_plugin "vagrant-berkshelf"
+  Vagrant.require_plugin "vagrant-omnibus"
   # All Vagrant configuration is done here. The most common configuration
   # options are documented and commented below. For a complete reference,
   # please see the online documentation at vagrantup.com.
@@ -11,7 +14,10 @@ Vagrant::Config.run do |config|
 
   VAGRANT_JSON = JSON.parse(Pathname(__FILE__).dirname.join('nodes', 'vagrant.json').read)
 
-  config.vm.provision :shell, :inline => "curl -L https://www.opscode.com/chef/install.sh | bash"
+  # config.vm.provision :shell, :inline => "curl -L https://www.opscode.com/chef/install.sh | bash"
+
+  config.omnibus.chef_version = :latest
+  config.berkshelf.enabled = false
 
   config.vm.provision :chef_solo do |chef|
     chef.cookbooks_path = ["site-cookbooks", "cookbooks"]

@@ -19,7 +19,10 @@
       "packages": ["libmysqlclient-dev"]
     }
   },
+  "ruby": {
+    "install_version": "ruby-2.0.0-p353"
+  },
   "run_list": [
-    "recipe[nginx::source]", "recipe[rvm::system_install]", "recipe[mysql::server]", "recipe[mysql::client]"
+    "recipe[nginx::source]", "recipe[rvm::system_install]", "recipe[mysql::server]", "recipe[mysql::client]", "recipe[ruby::install]"
   ]
 }
