@@ -36,5 +36,6 @@
     "recipe[postgresql::server]",
     "recipe[postgresql::ruby]",
     "recipe[git]",
+    "recipe[unicorn]"
   ]
 }
