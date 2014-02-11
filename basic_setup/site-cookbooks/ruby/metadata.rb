@@ -1,15 +1,7 @@
-name              'ruby'
-maintainer        'AlterEGO Labs'
-maintainer_email  'sergeg1990@gmail.com'
-license           'Apache 2.0'
-description       'Installs ruby through rvm'
-long_description  ''
-version           '0.0.1'
-recipe            'ruby::install', 'Installs packages required for mysql clients using run_action magic'
-
-# actually tested on
-supports 'redhat'
-supports 'amazon'
-supports 'centos'
-supports 'debian'
-supports 'ubuntu'
+name             'ruby'
+maintainer       'AlterEGO Labs'
+maintainer_email 'sergeg1990@gmail.com'
+license          'All rights reserved'
+description      'Installs/Configures ruby'
+long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
+version          '0.1.0'
