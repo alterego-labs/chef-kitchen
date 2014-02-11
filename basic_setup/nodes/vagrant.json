@@ -19,10 +19,21 @@
       "packages": ["libmysqlclient-dev"]
     }
   },
+  "postgresql": {
+    "password": {
+      "postgres": "password"
+    }
+  },
   "ruby": {
     "install_version": "ruby-2.0.0-p353"
   },
   "run_list": [
-    "recipe[nginx::source]", "recipe[rvm::system_install]", "recipe[mysql::server]", "recipe[mysql::client]", "recipe[ruby2]"
+    "recipe[nginx::source]",
+    "recipe[rvm::system_install]",
+    "recipe[mysql::server]",
+    "recipe[mysql::client]",
+    "recipe[ruby]",
+    "recipe[postgresql::server]",
+    "recipe[postgresql::ruby]"
   ]
 }
