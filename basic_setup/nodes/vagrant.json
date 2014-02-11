@@ -34,6 +34,7 @@
     "recipe[mysql::client]",
     "recipe[ruby]",
     "recipe[postgresql::server]",
-    "recipe[postgresql::ruby]"
+    "recipe[postgresql::ruby]",
+    "recipe[git]",
   ]
 }
