@@ -35,3 +35,19 @@ After your kitchen has changed run provisioner again:
 ```
 vagrant provision
 ```
+
+## Cook real server
+
+For cooking server are used `knife solo` command line tool. If you hasn't already cooked selected server you must run `prepare` command that installed chef-solo on it. For this run:
+
+```
+knife solo prepare username@hostname
+```
+
+After this file `hostname.json` will appear in *nodes* folder. You must specify cookbooks attributes and run list. You may use *vagrant.json* as example. When you already finished previous step run next command:
+
+```
+knife solo cook username@hostname
+```
+
+Cooking may take some time so you may make coffee. After all your server's software state is according to applied cookbooks. Enjoy!
